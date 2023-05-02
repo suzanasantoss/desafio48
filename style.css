@@ -1,4 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    --orange: #ef8a17;
+    --green: #0B3723;
+    --white: #E6E9F9;
+    --dark-white: #CED5A5;
+}
+
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--dark-white);
+    font-family: 'Roboto Slab', serif;
+}
+body {
+  background-image: url('assets/imagemDeFundo.jpg');
+  background-repeat: repeat;
+  animation: criptografia 100s linear infinite;
+}
+
+@keyframes criptografia {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 1000px 1000px;
+  }
+}
+
+
+header {
+    background-color: var(--orange);
+    height: fit-content;
+    padding: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: transform 0.5s;
+    text-align: center;
+}
+
+header nav a:hover {
+    transform: scale(1.1);
+    text-decoration-line: none;
+    color: var(--green);
+}
+
+main {
+    width: 80vw;
+    height: fit-content;
+    margin: 15px auto;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+}
+@keyframes slideIn {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+input {
+    width: 50%;
+    height: 35px;
+    display: block;
+    margin: auto;
+}
+
+button {
+    display: block;
+    margin: auto;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+#resultado {
+    padding: 10px;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: white;
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    overflow: auto;
+    /* como fazer para acompanhar o scroll? */
+}
+
+.custom-loader {
+    display: none;
+    margin: 15px auto;
+    width: 120px;
+    height: 20px;
+    -webkit-mask: radial-gradient(circle closest-side, #A879F4 94%, #0000) left/20% 100%;
+    background: linear-gradient(var(--orange) 0 0) left/0% 100% no-repeat var(--green);
+    animation: loading 1.5s infinite steps(6);
+}
+
+@keyframes loading {
+    100% {
+        background-size: 120% 100%
+    }
+}
+
+#informationArea {
+    width: 85%;
+    margin: 30px auto 0 auto;
+}
+
+footer {
+    background-color: var(--green);
+    color: var(--white);
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 2%;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+#contato-devs {
+    margin-bottom: 1%;
+}
+
+#contato-devs a {
+    margin: 0 1% 0 1%;
+    color: var(--white);
+}
+
+footer h2 {
+    margin-bottom: 2px;
+    font-size: 1.3em;
+}
+
+footer #redes-instituto {
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+}
+
+footer #redes-instituto a {
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 2rem;
+    transition: transform 0.5s;
+}
+
+#redes-instituto a:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    text-align: center;
+}
+.titleInf {
+  color: black;
+  transition: all 0.2s ease-in-out;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.titleInf:hover {
+  color: #ef8a17;
+  font-size: 22px;
+}
+
+.titleInfh1:hover {
+  color: #ef8a17;
+}
+.button1:hover {
+  background-color: #028302;
+}
+.cadeado {
+  animation: spin 3s linear infinite;
+  animation-duration: 0.3s;
+}
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(5deg)
+  }
 }
