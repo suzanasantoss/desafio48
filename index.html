@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Criptografia</title>
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -19,15 +19,103 @@
   #Utilize CSS, se quiser acrescentar alguma estilo ao programa.
   
   -->
-  <h3>Criptografe sua mensagem</h3>
-  <input type="text" id="entrada" style="width: 400px;">
-  <br>
-  <button id="submit" style="margin-top: 5px; margin-bottom: 5px;">Clique aqui para converter!</button>
-  <br>
-  <textarea id="resultado" cols="30" rows="10">
- </textarea>
+  <header>
+    <nav>
+      <a href="#criptografeArea">Criptografe sua mensagem aqui</a>
+      <a href="#what">O que é Criptografia</a>
+      <a href="#how">Como pode ser usada?</a>
+      <a href="#where">Onde pode ser usada?</a>
+      <a href="#example">Exemplo prático</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="criptografeArea">
+      <h1 class="titleInfh1">Criptografe sua mensagem</h1>
+      <img class="cadeado" src="assets/pngimg.com - padlock_PNG9416.png" alt="Cadeado" height="20" width="20">
+
+      <input type=" text" id="entrada">
+      <br>
+      <button id="submit" class="button1">Clique aqui para converter!</button>
+      <br>
+      <div class="custom-loader"></div>
+      <div id="resultado">
+
+      </div>
+    </section>
+    <section id="informationArea">
+      <h2 id="what" class="titleInf">O que é criptografia</h2>
+      <p>Criptografia é a ciência que estuda técnicas para proteger a comunicação de informações confidenciais
+        através da transformação de dados em um formato que seja difícil de ser compreendido por terceiros. O
+        objetivo da criptografia é tornar a informação ininteligível para quem não tem a chave ou a senha
+        necessária para decodificá-la.</p>
+      <h2 id="how" class="titleInf">Como pode ser usada?</h2>
+      <p>Entre as técnicas de criptografia mais comuns na computação estão o uso de chaves <strong> simétricas
+        </strong> e chaves <strong> assimétricas </strong>. Na criptografia de chave simétrica, a mesma chave é
+        usada para criptografar e descriptografar a informação. Na criptografia de chave assimétrica, são usadas
+        duas chaves distintas: uma para criptografar e outra para descriptografar a informação. <strong>A
+          criptografia de chave assimétrica é mais segura</strong>, pois a chave de criptografia pode ser
+        compartilhada publicamente sem comprometer a segurança da informação.</p>
+      <h2 id="where" class="titleInf">Onde pode ser usada?</h2>
+      <ul>
+        <li><strong>Segurança de redes</strong>: para proteger a transmissão de informações pela internet, como
+          dados bancários,
+          senhas e informações pessoais.</li>
+        <li><strong>Armazenamento de dados</strong>: para proteger informações armazenadas em dispositivos, como
+          discos rígidos,
+          pendrives e smartphones.</li>
+        <li><strong>Autenticação de usuários</strong>: para garantir que apenas usuários autorizados possam
+          acessar informações
+          sensíveis, como contas bancárias e sistemas corporativos.</li>
+        <li><strong>Assinaturas digitais</strong>: para garantir a autenticidade e a integridade de documentos
+          eletrônicos.</li>
+      </ul>
+      <h2 id="example" class="titleInf">Exemplo prático</h2>
+      <p>Quando um usuário faz login em sua conta bancária, ele fornece seu nome de usuário e senha para
+        autenticação. Essa informação é então transmitida pela internet até os servidores do banco.</p>
+      <p>Para garantir que essas informações sejam protegidas durante a transmissão, é utilizada a criptografia. O
+        processo pode ser descrito da seguinte maneira:</p>
+      <ol>
+        <li>O navegador do usuário solicita acesso ao servidor do banco, que envia um certificado digital ao
+          navegador.</li>
+        <li>O navegador verifica a autenticidade do certificado e gera uma chave de sessão exclusiva para a
+          comunicação com o servidor.</li>
+        <li>O navegador criptografa a chave de sessão usando a chave pública do servidor, que é conhecida
+          publicamente.</li>
+        <li>O servidor recebe a chave de sessão criptografada, descriptografa-a usando sua chave privada e, em
+          seguida, usa a chave de sessão para criptografar as informações de login fornecidas pelo usuário.
+        </li>
+        <li>O navegador recebe as informações criptografadas do servidor, descriptografa-as usando a chave de
+          sessão e, em seguida, apresenta o resultado ao usuário.</li>
+      </ol>
+      <p>Dessa forma, mesmo que um atacante intercepte as informações transmitidas entre o navegador e o servidor,
+        ele não será capaz de decodificar as informações de login, já que a chave de sessão é criptografada e
+        exclusiva para cada comunicação.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div id="contato-devs">
+      <p>Teve problemas ao usar o site? Contate as desenvolvedoras:</p>
+      <a href="mailto:analice.costa@estudante.ifto.edu.br">analice.costa@estudante.ifto.edu.br</a>
+      <a href="mailto:suzana.araujo2@estudante.ifto.edu.br">suzana.araujo2@estudante.ifto.edu.br</a>
+    </div>
+    <h2>Redes Sociais do Instituto</h2>
+    <div id="redes-instituto">
+      <a target="_blank" href="https://www.facebook.com/IFTOoficial" class="fa-brands fa-facebook"></a>
+
+      <a target="_blank" href="https://www.instagram.com/ifto.araguaina/" class="fa-brands fa-instagram"></a>
+
+      <a target="_blank" href="https://www.youtube.com/channel/UCI11Hzaff0WWxLdi6Fbb8GA/featured"
+        class="fa-brands fa-youtube"></a>
+
+      <a target="_blank" href="https://twitter.com/IFTOoficial" class="fa-brands fa-twitter"></a>
+    </div>
+  </footer>
 
 </body>
 <script src="script.js"></script>
+<script src="https://kit.fontawesome.com/c1ff1e8edf.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 
 </html>
